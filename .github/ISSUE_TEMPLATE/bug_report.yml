@@ -1,0 +1,98 @@
+name: Bug report
+description: Report a reproducible problem with Frostline Racing
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please provide enough information to reproduce it.
+
+  - type: input
+    id: frostline-version
+    attributes:
+      label: Frostline Racing version
+      description: Include the full version and edition shown on server startup.
+      placeholder: "0.1.0-beta-free"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: build
+    attributes:
+      label: Build
+      options:
+        - Linux
+        - Windows
+        - macOS
+        - Universal
+        - Unsure
+    validations:
+      required: true
+
+  - type: input
+    id: server-version
+    attributes:
+      label: Server software and version
+      description: Include both the server software and Minecraft version.
+      placeholder: "Paper 1.21.11 build 123"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem description
+      description: Explain what happened and what you expected to happen.
+      placeholder: |
+        What happened:
+        What I expected:
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide clear steps that consistently trigger the problem.
+      placeholder: |
+        1. Create an arena...
+        2. Join using...
+        3. Start the race...
+        4. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or errors
+      description: Paste relevant console output inside the code block.
+      render: shell
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Relevant configuration
+      description: Include the relevant arena or plugin configuration. Remove private information first.
+      render: yaml
+
+  - type: textarea
+    id: plugins
+    attributes:
+      label: Other installed plugins
+      description: List other plugins that may be relevant.
+      placeholder: "WorldEdit, Multiverse-Core, PlaceholderAPI..."
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I am using an official, unmodified Frostline Racing build.
+          required: true
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I included reproduction steps and relevant logs where available.
+          required: true

@@ -1,0 +1,85 @@
+name: Feature request
+description: Suggest an improvement or new feature for Frostline Racing
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature suggestions are welcome, but submission does not guarantee implementation.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: Explain what problem this feature would solve.
+      placeholder: "Server owners currently need to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed feature
+      description: Describe how you think the feature should work.
+      placeholder: |
+        Add an option that...
+        Players would...
+        Administrators could...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe any workarounds or alternative designs you considered.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature area
+      options:
+        - Race gameplay
+        - Arena setup
+        - Queues and matchmaking
+        - Spectator mode
+        - User interface
+        - Statistics and leaderboards
+        - Rewards and integrations
+        - Cosmetics
+        - Administration
+        - Configuration
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Suggested edition
+      description: This is only a suggestion; final placement may differ.
+      options:
+        - Free
+        - Premium
+        - Either
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add mockups, screenshots, examples, or other useful information.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for similar suggestions.
+          required: true
+        - label: This request describes a feature rather than a support question.
+          required: true
