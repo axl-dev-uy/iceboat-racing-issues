@@ -7,7 +7,6 @@ This repository does not contain the plugin source code. Frostline Racing is clo
 ## Downloads
 
 - Spigot: [[link](https://www.spigotmc.org/resources/frostline-racing-beta-ice-boat-minigame.136999/)]
-- Modrinth: [[link](https://modrinth.com/plugin/frostline-racing-beta-ice-boat-minigame)]
 
 ## Reporting bugs
 
