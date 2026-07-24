@@ -2,6 +2,11 @@
 
 All notable changes to Frostline Racing will be documented here.
 
+## [Beta 0.3.2.1] - 2026-07-24
+
+### Fixed
+- Uploaded the proper jar with the fix instead of an old stale one
+
 ## [Beta 0.3.2] - 2026-07-24
 
 ### Added
