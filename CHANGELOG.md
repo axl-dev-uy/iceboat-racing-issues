@@ -2,6 +2,11 @@
 
 All notable changes to Frostline Racing will be documented here.
 
+## [Beta 0.3.1] - 2026-07-24
+
+### Changed
+- Paper compatibility baseline is now 1.21.6, with the 0.3.1 jar intended for Paper 1.21.6 and newer builds, including 26.x; use Java 21 on pre-26.1 builds and Java 25 on 26.1+
+
 ## [Beta 0.3.0] - 2026-07-16
 
 ### Added
@@ -19,6 +24,7 @@ All notable changes to Frostline Racing will be documented here.
 
 ### Changed
 
+- Paper compatibility baseline is now 26.1, with the 0.3 jar intended for Paper 26.1 through 26.2 on Java 25
 - Start-line countdown wording is clearer in commands and the setup GUI
 - Premium jars now package the Ranked feature module, while Free jars exclude ranked implementation classes and service metadata
 - Final artifacts now include generated build metadata for platform, artifact name, and build timestamp
@@ -37,24 +43,8 @@ All notable changes to Frostline Racing will be documented here.
 - Separate waiting countdown and start countdown settings for each arena
 - New admin command to set the waiting countdown: `/iceboat admin setwaitingcountdown <arena> <seconds>`
 - Admin commands to set arena minimum and maximum players independently
-- Premium setup GUI controls for minimum players, maximum players, waiting countdown, and start countdown
 - Config files now add missing default options automatically after updates, while keeping existing custom values
 - Legacy color code support for messages, including hex colors
-- Universal plus Linux, Windows, and macOS builds for both Free and Premium
-
-### Changed
-
-- Force starting a race now respects the waiting countdown instead of jumping straight into the race flow
-- Arena setup edits no longer require disabling the arena first for normal changes
-- Setup changes made while races are active are saved and applied after the race finishes
-- Enable and disable command suggestions now show the correct arenas
-- Start-line countdown wording is clearer in commands and the setup GUI
-
-### Fixed
-
-- Older arena configs missing countdown settings are filled in with safe defaults
-- Missing message keys are restored from the latest bundled defaults
-- SQLite license files are included in packaged jars
 
 ## [0.1-beta] - 2026-07-12
 
