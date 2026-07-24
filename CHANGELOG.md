@@ -2,6 +2,12 @@
 
 All notable changes to Frostline Racing will be documented here.
 
+## [Beta 0.3.2] - 2026-07-24
+
+### Added
+- Admin setup command for track lap counts: `/iceboat admin setlaps <arena> <laps>`
+- Premium setup GUI control for per-arena lap counts
+
 ## [Beta 0.3.1] - 2026-07-24
 
 ### Changed
