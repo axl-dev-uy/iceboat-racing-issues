@@ -2,14 +2,30 @@
 
 All notable changes to Frostline Racing will be documented here.
 
-## [Beta 0.4] - 2026-07-24
+## [Beta 0.5] - 2026-07-27
+
+### Added
+- Rebranded public plugin metadata, messages, docs, and artifact names to Frostline Racing
+- New primary command `/frostline`
+- Legacy `/iceboat` command alias for existing server workflows
+- New `frostline.*` permissions with legacy `iceboat.*` permission compatibility
+- Startup migration from `plugins/Iceboat` to `plugins/FrostlineRacing`
+- New `%frostline_*%` PlaceholderAPI expansion with legacy `%iceboat_*%` placeholders still registered
+- Legacy plugin item marker compatibility for lobby, session, spectator, and Premium setup items created before the rebrand
+
+### Changed
+- Default config, message, UI, cosmetics, and setup GUI config versions were bumped to `0.5`
+- Default server data paths in docs now use `plugins/FrostlineRacing`
+- Free and Premium artifact names now use `FrostlineRacing-*`
+
+## [Beta 0.4] - 2026-07-27
 
 ### Added
 - Arena race music with support for custom resource-pack sound keys and `.nbs` files
-- Per-player music toggle: `/iceboat music <on|off>`
-- Admin music setup commands: `/iceboat admin setmusic <arena> <resource-pack|nbs|off> [key/file] [volume] [pitch]`
-- Admin music preview command: `/iceboat admin previewmusic <arena>`
-- Tab completion for `.nbs` files found in `plugins/Iceboat/music`
+- Per-player music toggle: `/frostline music <on|off>`
+- Admin music setup commands: `/frostline admin setmusic <arena> <resource-pack|nbs|off> [key/file] [volume] [pitch]`
+- Admin music preview command: `/frostline admin previewmusic <arena>`
+- Tab completion for `.nbs` files found in `plugins/FrostlineRacing/music`
 - Configurable music preview duration with `music.preview-seconds`
 - Premium setup GUI race music preview button
 - Root music setup guide for server owners
@@ -21,7 +37,7 @@ All notable changes to Frostline Racing will be documented here.
 - Resource config versions were bumped to `0.4`
 
 ### Fixed
-- Fixed obfuscated Premium music setup linkage so `/iceboat admin setmusic` works in packaged jars
+- Fixed obfuscated Premium music setup linkage so `/frostline admin setmusic` works in packaged jars
 - Fixed NBS loading to avoid verifier errors after obfuscation
 - Fixed NBS playback for files whose header length is shorter than the last parsed note
 - Fixed missing/invalid NBS previews reporting success even though no music played
@@ -37,7 +53,7 @@ All notable changes to Frostline Racing will be documented here.
 ## [Beta 0.3.2] - 2026-07-24
 
 ### Added
-- Admin setup command for track lap counts: `/iceboat admin setlaps <arena> <laps>`
+- Admin setup command for track lap counts: `/frostline admin setlaps <arena> <laps>`
 - Premium setup GUI control for per-arena lap counts
 
 ## [Beta 0.3.1] - 2026-07-24
@@ -54,9 +70,9 @@ All notable changes to Frostline Racing will be documented here.
 - Generic Partner edition architecture for future custom builds without an active named Partner artifact
 - Premium Ranked Foundation with casual/ranked arena modes, browser mode selection, ranked joins, Elo-style ratings, ranked stats, and ranked leaderboards
 - Ranked arena configuration through `allowed-modes` and per-arena `ranked.minimum-players`
-- Ranked setup command: `/iceboat admin setranked <arena> <enabled|disabled>`
-- Ranked commands: `/iceboat join <arena> ranked`, `/iceboat join random ranked`, `/iceboat quickjoin [player] ranked`, `/iceboat rank [player]`, `/iceboat rankedtop [page]`, and `/iceboat admin ranked setrating <player> <rating> --confirm`
-- Admin diagnostics command: `/iceboat admin about` for Frostline Racing support reports, with platform build metadata, generated timestamp, feature gates, active hooks, SQLite storage details, and an in-chat copy button
+- Ranked setup command: `/frostline admin setranked <arena> <enabled|disabled>`
+- Ranked commands: `/frostline join <arena> ranked`, `/frostline join random ranked`, `/frostline quickjoin [player] ranked`, `/frostline rank [player]`, `/frostline rankedtop [page]`, and `/frostline admin ranked setrating <player> <rating> --confirm`
+- Admin diagnostics command: `/frostline admin about` for Frostline Racing support reports, with platform build metadata, generated timestamp, feature gates, active hooks, SQLite storage details, and an in-chat copy button
 - Ranked PlaceholderAPI values for rating, races, wins, finishes, and DNFs when both PlaceholderAPI and Ranked are available
 - Admin stats JSON export/import commands for backups and migrations
 
@@ -71,7 +87,7 @@ All notable changes to Frostline Racing will be documented here.
 
 ### Fixed
 
-- Fixed obfuscated ranked arena mode loading so `/iceboat admin reload` handles `allowed-modes` safely
+- Fixed obfuscated ranked arena mode loading so `/frostline admin reload` handles `allowed-modes` safely
 - Fixed obfuscated Premium startup issues affecting kept setup/ranked classes and optional feature loading
 
 ## [Beta 0.2.0] - 2026-07-14
@@ -79,7 +95,7 @@ All notable changes to Frostline Racing will be documented here.
 ### Added
 
 - Separate waiting countdown and start countdown settings for each arena
-- New admin command to set the waiting countdown: `/iceboat admin setwaitingcountdown <arena> <seconds>`
+- New admin command to set the waiting countdown: `/frostline admin setwaitingcountdown <arena> <seconds>`
 - Admin commands to set arena minimum and maximum players independently
 - Config files now add missing default options automatically after updates, while keeping existing custom values
 - Legacy color code support for messages, including hex colors
@@ -88,7 +104,7 @@ All notable changes to Frostline Racing will be documented here.
 
 ### Added
 
-- Complete ice boat race lifecycle
+- Complete Frostline Racing race lifecycle
 - Ordered checkpoints and multiple laps
 - Placement tracking, DNF handling, and race timeout
 - Arena browser GUI and smart quick join

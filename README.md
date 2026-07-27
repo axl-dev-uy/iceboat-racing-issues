@@ -6,7 +6,8 @@ This repository does not contain the plugin source code. Frostline Racing is clo
 
 ## Downloads
 
-- Spigot: [[link](https://www.spigotmc.org/resources/frostline-racing-beta-ice-boat-minigame.136999/)]
+- [Spigot — Free edition](https://www.spigotmc.org/resources/frostline-racing-beta-ice-boat-minigame.136999/)
+- [BuiltByBit — Premium edition](https://builtbybit.com/resources/frostline-racing-beta.117453/)
 
 ## Reporting bugs
 
@@ -28,9 +29,9 @@ Use the Issues tab for reproducible bugs and feature requests.
 
 ## Third-party software
 
-Frostline Racing includes Xerial SQLite JDBC Driver 3.51.0.0.
+Frostline Racing includes the Xerial SQLite JDBC Driver 3.51.0.0.
 
-Its license texts are available in:
+Its license texts are available here:
 
-- [Apache 2.0 license](THIRD_PARTY_LICENSES/sqlite-jdbc-LICENSE.txt)
+- [Apache License 2.0](THIRD_PARTY_LICENSES/sqlite-jdbc-LICENSE.txt)
 - [Zentus BSD-style license](THIRD_PARTY_LICENSES/sqlite-jdbc-LICENSE.zentus.txt)
