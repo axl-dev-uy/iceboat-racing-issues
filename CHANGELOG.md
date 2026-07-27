@@ -2,6 +2,38 @@
 
 All notable changes to Frostline Racing will be documented here.
 
+## [Beta 0.4] - 2026-07-24
+
+### Added
+- Arena race music with support for custom resource-pack sound keys and `.nbs` files
+- Per-player music toggle: `/iceboat music <on|off>`
+- Admin music setup commands: `/iceboat admin setmusic <arena> <resource-pack|nbs|off> [key/file] [volume] [pitch]`
+- Admin music preview command: `/iceboat admin previewmusic <arena>`
+- Tab completion for `.nbs` files found in `plugins/Iceboat/music`
+- Configurable music preview duration with `music.preview-seconds`
+- Premium setup GUI race music preview button
+- Root music setup guide for server owners
+
+### Changed
+- Music playback uses the Records sound category so client Jukebox/Note Blocks volume controls apply more predictably
+- Last-racer winner resolution now records a declared placement instead of a completed race finish when the survivor did not cross the finish line
+- Declared winners can keep race placement/win credit without creating artificial race times or best-lap leaderboard entries
+- Resource config versions were bumped to `0.4`
+
+### Fixed
+- Fixed obfuscated Premium music setup linkage so `/iceboat admin setmusic` works in packaged jars
+- Fixed NBS loading to avoid verifier errors after obfuscation
+- Fixed NBS playback for files whose header length is shorter than the last parsed note
+- Fixed missing/invalid NBS previews reporting success even though no music played
+- Fixed music previews continuing indefinitely; previews now stop after `music.preview-seconds`
+- Fixed reconnecting racers not resuming race music during reconnect grace
+- Fixed incomplete current laps being recorded when a player won by last-racer declaration
+
+## [Beta 0.3.2.1] - 2026-07-24
+
+### Fixed
+- Uploaded the proper jar with the fix instead of an old stale one
+
 ## [Beta 0.3.2] - 2026-07-24
 
 ### Added
