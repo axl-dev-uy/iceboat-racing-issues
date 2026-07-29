@@ -33,6 +33,7 @@ All notable changes to Frostline Racing will be documented here.
 - Fixed countdown titles lingering after the race starts when the race title section is disabled
 - Fixed the countdown rendering a final zero-second title frame at race start
 - Fixed configured race titles blinking by sending them once at race start instead of every race UI refresh
+
 ## [Beta 0.5] - 2026-07-27
 
 ### Added
