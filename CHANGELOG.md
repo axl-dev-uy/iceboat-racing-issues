@@ -2,6 +2,37 @@
 
 All notable changes to Frostline Racing will be documented here.
 
+## [Beta 0.7] - 2026-07-29
+
+### Added
+- Configured Frostline Racing messages, UI text, GUI labels, and item names can now consume placeholders from PlaceholderAPI when PlaceholderAPI is installed
+- PlaceholderAPI consumption is available in Free and Premium; Frostline Racing's own `%frostline_*%` PlaceholderAPI expansion remains Premium-only
+
+### Changed
+- Default config, message, UI, cosmetics, and setup GUI config versions were bumped to `0.7`
+- Default chat-sent messages now include the configured `{prefix}` token
+- Message rendering now supports both `{prefix}` and `%prefix%` for existing configs
+- Default message copy now avoids repeating the plugin name outside the prefix, except for diagnostics
+
+### Fixed
+- Fixed obfuscated Free jars failing verification during startup after PlaceholderAPI config support was added
+
+## [Beta 0.6] - 2026-07-28
+
+### Added
+- Premium PlaceholderAPI leaderboard placeholders for top 10 race times and lap times on bundled and user-created arenas
+
+### Changed
+- Default config, message, UI, cosmetics, and setup GUI config versions were bumped to `0.6`
+- Documented that configured race titles are one-shot start-of-race UI, while race bossbars, actionbars, and scoreboards update during the race
+- Race time displays now use two decimal places across UI, results, rewards, commands, and PlaceholderAPI values
+- Race UI refreshes every tick so two-decimal live timers advance cleanly without increasing checkpoint scan frequency
+
+### Fixed
+- Fixed malformed Premium default cosmetic permission nodes created during the Frostline Racing rebrand
+- Fixed countdown titles lingering after the race starts when the race title section is disabled
+- Fixed the countdown rendering a final zero-second title frame at race start
+- Fixed configured race titles blinking by sending them once at race start instead of every race UI refresh
 ## [Beta 0.5] - 2026-07-27
 
 ### Added

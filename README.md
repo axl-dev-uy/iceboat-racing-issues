@@ -9,6 +9,12 @@ This repository does not contain the plugin source code. Frostline Racing is clo
 - [Spigot — Free edition](https://www.spigotmc.org/resources/frostline-racing-beta-ice-boat-minigame.136999/)
 - [BuiltByBit — Premium edition](https://builtbybit.com/resources/frostline-racing-beta.117453/)
 
+## Documentation
+
+The public Frostline Racing wiki includes installation, arena setup, commands, permissions, configuration, music, cosmetics, ranked mode, PlaceholderAPI, edition differences, updating, and troubleshooting documentation.
+
+- [Wiki Link](https://frostline.officer-ray.xyz')
+
 ## Reporting bugs
 
 Please include:
