@@ -13,7 +13,7 @@ This repository does not contain the plugin source code. Frostline Racing is clo
 
 The public Frostline Racing wiki includes installation, arena setup, commands, permissions, configuration, music, cosmetics, ranked mode, PlaceholderAPI, edition differences, updating, and troubleshooting documentation.
 
-- [Wiki Link](https://frostline.officer-ray.xyz')
+- [Wiki Link](https://frostline.officer-ray.xyz)
 
 ## Reporting bugs
 
