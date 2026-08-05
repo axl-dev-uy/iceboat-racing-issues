@@ -2,6 +2,59 @@
 
 All notable changes to Frostline Racing will be documented here.
 
+## [Beta 0.9] - 2026-08-05
+
+### Added
+- Started the Beta 0.9 documentation track for Advanced Premium Music planning
+- Added the `ADVANCED_MUSIC` gate and dedicated `featureMusic` source set so Premium ships Advanced Music by default and future Partner builds can opt in cleanly
+- Added Premium Advanced Music config parsing for phase-specific `lobby`, `countdown`, `race`, `final-lap`, and `results` playlists
+- Added ordered, shuffled, and weighted one-track selection strategies for Premium Advanced Music playlists
+- Added per-player phase playback wiring for lobby, countdown, race, final lap, and results music while preserving Free/simple legacy race music behavior
+- Added Premium admin setup dashboard visibility and race-phase preview support for loaded advanced music configs
+
+### Changed
+- Default config, message, UI, cosmetics, and setup GUI config versions were bumped to `0.9`
+- Project and default Free/Premium artifact versions were bumped to `0.9`
+- MySQL support now lives in a dedicated `featureMysql` source set so Premium ships it by default and future Partner builds can opt into the `MYSQL` gate without packaging unrelated Premium implementation classes
+- MySQL config defaults now live in `config-mysql.yml` and merge into `config.yml` whenever the active edition has the `MYSQL` gate
+- Premium MySQL startup logging now reflects that cached reads and ranked persistence are available
+- Artifact validation now checks that Free jars exclude Advanced Music implementation/service metadata, Premium jars include it, and Partner jars can opt in or out explicitly
+- MySQL connection config now exposes `storage.mysql.allow-public-key-retrieval` for local/test servers that require RSA public key retrieval during authentication
+
+### Fixed
+- Message prefix formatting is now isolated so message body colors do not recolor the configured prefix
+- Queued admin reload completion now notifies the player who requested it when they are still online instead of only sending the completion message to console
+- `/frostline admin about` now reports the implemented `MYSQL` gate as an available feature instead of a reserved gate
+
+## [Beta 0.8] - 2026-08-03
+
+### Added
+- Added a stats persistence repository boundary as the first conservative MySQL support foundation
+- Added tab completion for JSON stats export files when running `/frostline admin stats import <file> --confirm`
+- Added storage identity defaults for shared persistence, including `storage.server-id` and `storage.table-prefix`
+- Added per-arena `leaderboard-key` metadata so servers can separate or intentionally share leaderboard identity across installations
+- Added storage backend health, server id, and table prefix details to `/frostline admin about`
+- Added explicit storage mode parsing; unsupported storage modes fail closed instead of silently falling back to SQLite
+- Added a Premium-only MySQL storage provider seam so Free artifacts cannot package MySQL implementation classes
+- Added Premium MySQL connection configuration defaults and async health diagnostics
+- Added first-version MySQL schema migration for the Premium storage backend, including schema version, player stats, best times, race history, ranked stats, and ranked race history tables
+- Added an async race-result persistence boundary so MySQL writes do not run directly in race-finish callbacks
+- Added Premium MySQL casual stats writes for completed race results, total player stats, and best race/lap times
+- Added Premium MySQL cached reads for player stats and race/lap leaderboards so general stats commands and placeholders avoid direct database queries
+- Added configurable Premium MySQL cache polling with `storage.mysql.cache-refresh-seconds`
+- Added a Premium-only `config-premium.yml` defaults overlay so Free builds no longer bundle MySQL, ranked, or Premium lobby item config defaults
+- Added Premium MySQL startup cache warmup for loaded arena leaderboards and online/joining player stats
+- Added Premium MySQL ranked persistence for ranked ratings, ranked race history, ranked stats, and ranked leaderboards
+- Added targeted Premium MySQL ranked stat read-through so `/frostline rank` can show current cross-server Elo without waiting for the cache polling interval
+- Added ranked join blocking while stats storage is unavailable
+
+### Changed
+- Default config, message, UI, cosmetics, and setup GUI config versions were bumped to `0.8`
+- Project and default Free/Premium artifact versions were bumped to `0.8`
+- Existing SQLite stats behavior now runs behind the repository boundary without changing public commands or storage files
+- Existing arenas are migrated with a default `leaderboard-key` equal to their arena id
+- `game.left-race-broadcast` now preserves configured MiniMessage formatting instead of forcing the whole broadcast red
+
 ## [Beta 0.7] - 2026-07-29
 
 ### Added
